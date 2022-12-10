@@ -8,6 +8,7 @@ class CategoryInline(admin.TabularInline):
 
 class PostAdmin(admin.ModelAdmin):
     inlines = [CategoryInline]
+    exclude = ('category',)
 
 class CategoryAdmin(admin.ModelAdmin):
     exclude = ('posts',)
